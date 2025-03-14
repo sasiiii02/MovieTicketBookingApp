@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="50sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="128dp"
+                android:layout_marginStart="32dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edtusername"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:hint="Enter User Name"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textColorHint="@color/white" />
+
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/edittext_background"
+                android:ems="10"
+                android:hint="Enter Password"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+            <TextView
+                android:id="@+id/forgetpw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Forget your Password?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp">
+            </TextView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="32dp"
+                style="@android:style/Widget.Button"
+                android:background="@drawable/orange_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:height="50sp"
+                android:text="Login"/>
+
+            <TextView
+                android:id="@+id/loginwith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" - Or Login With -"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="28dp" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/google"
+                    android:layout_marginLeft="120dp">
+                    </ImageView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/facebook_icon"
+                    android:layout_marginLeft="10dp">
+
+                </ImageView>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/twitter_icon"
+                    android:layout_marginLeft="10dp">
+
+                </ImageView>
+
+
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="58dp">
+            </TextView>
+            <TextView
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register Now"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp">
+            </TextView>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

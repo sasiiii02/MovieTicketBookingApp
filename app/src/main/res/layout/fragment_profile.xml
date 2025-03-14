@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_bg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:text="SasiKaru"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:text="sasi@gmail.com"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:text="0745896222"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/movies_watched"
+            android:text="10+ Movies Watched"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tickets_booked"
+            android:text="40 Tickets Booked"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/loyalty_points"
+            android:text="450 Loyalty Points"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/notification_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification Settings"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/payment_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Methods"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+</FrameLayout>

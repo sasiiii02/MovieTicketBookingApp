@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".movieList">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        tools:ignore="MissingConstraints,NotSibling">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/menuIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@drawable/menu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/appTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="CineMate"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/menuIcon"
+                    app:layout_constraintTop_toTopOf="@id/menuIcon" />
+
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/search"
+                android:drawableEnd="@drawable/microphone"
+                android:drawablePadding="15dp"
+                android:hint="Search Movies"
+                android:padding="12dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+            <!-- Categories -->
+            <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Category"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/orange_background"
+                    android:gravity="center"
+                    android:text="Horror"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"
+                    android:text="Romance"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"
+                    android:text="Romance"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Now Showing -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Now Showing"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNowShowing"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Upcoming -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:text="Upcoming"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
