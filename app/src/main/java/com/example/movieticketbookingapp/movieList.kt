@@ -3,9 +3,6 @@ package com.example.movieticketbookingapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.movieticketbookingapp.MovieListFragment
-import com.example.movieticketbookingapp.SearchFragment
-import com.example.movieticketbookingapp.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class movieList : AppCompatActivity() {
@@ -23,7 +20,9 @@ class movieList : AppCompatActivity() {
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> loadFragment(MovieListFragment())
-                R.id.nav_ticket -> loadFragment(SearchFragment())
+                R.id.nav_ticket -> loadFragment(TicketFragment())
+                R.id.nav_notifications -> loadFragment(NotificationsFragment())
+
                 R.id.nav_user -> loadFragment(ProfileFragment())
             }
             true
