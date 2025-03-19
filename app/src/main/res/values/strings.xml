@@ -3,6 +3,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name">sasiiiii</string>
+    <string name="or_sign_in_with">- Or Sign in With -</string>
+    <string name="login">Login</string>
+    <string name="forget_your_password">Forget your Password?</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_user_name">Enter User Name</string>
+    <string name="loginHeading">Login</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register_now">Register Now</string>
+    <string name="twitter">Twitter</string>
+    <string name="facebook">Facebook</string>
 
 
 </resources>
