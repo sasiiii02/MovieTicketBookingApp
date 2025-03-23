@@ -1,6 +1,9 @@
 package com.example.movieticketbookingapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,8 +28,14 @@ class SeatSelection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seat_selection)
 
+        val buyTicket = findViewById<Button>(R.id.buyTicket)
+        buyTicket.setOnClickListener {
+            val intent = Intent(this,Payment::class.java)
+            startActivity(intent)
+        }
+
         // Initialize Date RecyclerView
-        dateRecyclerView = findViewById(R.id.dateRecylerview)
+        dateRecyclerView = findViewById(R.id.recyclerViewDate)
         dateList.addAll(
             listOf(
                 DateModel("15", "Fri"),
@@ -36,6 +45,11 @@ class SeatSelection : AppCompatActivity() {
                 DateModel("19", "Tue")
             )
         )
+        val back = findViewById<ImageView>(R.id.backButton)
+        back.setOnClickListener {
+            finish() // This will close MovieDetailsActivity and return to the previous screen
+        }
+
 
         dateAdapter = DateAdapter(dateList) { selectedDate ->
             Toast.makeText(this, "Selected Date: ${selectedDate.date}", Toast.LENGTH_SHORT).show()
@@ -45,7 +59,7 @@ class SeatSelection : AppCompatActivity() {
         dateRecyclerView.adapter = dateAdapter
 
         // Initialize Time RecyclerView
-        timeRecyclerView = findViewById(R.id.timeRecylerview)
+        timeRecyclerView = findViewById(R.id.recyclerViewTime)
         timeList.addAll(
             listOf(
                 TimeModel("10:00 AM"),
@@ -64,7 +78,7 @@ class SeatSelection : AppCompatActivity() {
         timeRecyclerView.adapter = timeAdapter
 
         // Initialize Seat RecyclerView
-        seatRecyclerView = findViewById(R.id.seatRecyclerView)
+        seatRecyclerView = findViewById(R.id.recyclerViewSeats)
         seatList.addAll(generateSeats())
 
         seatAdapter = SeatAdapter(seatList) { selectedSeat ->

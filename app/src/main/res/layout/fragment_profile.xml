@@ -7,9 +7,68 @@
     tools:context=".ProfileFragment"
     android:background="@drawable/gradient_background">
 
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="profileimg"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arc"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:id="@+id/tvProfileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/Settings"
+                android:src="@drawable/settings2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="234dp"
+            android:layout_height="172dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/pp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="275dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,126 +76,84 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Header Layout -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <!-- Profile Title -->
-                <TextView
-                    android:id="@+id/tvProfileTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    android:text="Profile"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
-
-                <!-- Settings Icon -->
-                <ImageView
-                    android:id="@+id/ivSettings"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/settings2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- Profile Image -->
-
-            <!-- User Details Section -->
-            <ImageView
-                android:id="@+id/ivProfilePic"
-                android:layout_width="197dp"
-                android:layout_height="152dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/rounded_image"
-
-
-                android:src="@drawable/profileimage"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="54dp"
-
+                android:layout_marginTop="14dp"
                 android:padding="16dp">
 
-                <!-- Username -->
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="User Name:"
+                    android:text="@string/user_name"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tvUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/edittext_background"
-                    android:drawableEnd="@drawable/edit"
-                    android:padding="12dp"
+                    android:padding="8dp"
+                    android:paddingStart="25sp"
+                    android:paddingEnd="25sp"
                     android:text="YourUsername"
                     android:textColor="@color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/edit"
+                    tools:ignore="HardcodedText" />
 
                 <!-- Email -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Email:"
+                    android:text="@string/email"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tvEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/edittext_background"
-                    android:drawableEnd="@drawable/edit"
-                    android:padding="12dp"
+                    android:padding="8dp"
+                    android:paddingStart="25sp"
+                    android:paddingEnd="25sp"
                     android:text="your@email.com"
                     android:textColor="@color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/edit"
+                    tools:ignore="HardcodedText" />
 
                 <!-- Phone -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Phone:"
+                    android:text="@string/phone"
                     android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:id="@+id/tvPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/edittext_background"
-                    android:padding="12dp"
-                    android:drawableEnd="@drawable/edit"
+                    android:padding="8dp"
+                    android:paddingStart="25sp"
+                    android:paddingEnd="25sp"
                     android:text="+94 71 445 0502"
                     android:textColor="@color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/edit"
+                    tools:ignore="HardcodedText" />
 
                 <!-- Password -->
                 <TextView
@@ -146,34 +163,51 @@
                     android:text="Password:"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/tvPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/edittext_background"
-                    android:padding="12dp"
-                    android:drawableEnd="@drawable/edit"
-                    android:text="************"
+                    android:padding="8dp"
+                    android:paddingStart="25sp"
+                    android:paddingEnd="25sp"
+                    android:text="@string/pass"
                     android:textColor="@color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/edit" />
             </LinearLayout>
+
+            <!-- Change Password Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/search_background"
+                android:text="Change Password"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:textAllCaps="false"
+                tools:ignore="HardcodedText" />
 
             <!-- Logout Button -->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnLogout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/orange_background"
-                android:text="Log Out"
+                android:text="@string/log_out"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:padding="12dp"/>
-
+                android:padding="12dp"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

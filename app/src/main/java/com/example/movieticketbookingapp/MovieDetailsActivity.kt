@@ -26,11 +26,21 @@ class MovieDetailsActivity : AppCompatActivity() {
         val movieReleaseDate = findViewById<TextView>(R.id.movie_release_date)
         val buyTicket = findViewById<Button>(R.id.buyTicket)
 
+
         buyTicket.setOnClickListener{
             val intent = Intent(this,SeatSelection::class.java)
             startActivity(intent)
 
         }
+        val back = findViewById<ImageView>(R.id.back_button)
+        back.setOnClickListener {
+            finish() // This will close MovieDetailsActivity and return to the previous screen
+        }
+
+
+
+
+
 
 
         // Get data from Intent

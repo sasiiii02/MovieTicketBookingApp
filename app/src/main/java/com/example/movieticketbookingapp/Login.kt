@@ -25,13 +25,18 @@ class Login : AppCompatActivity() {
         password = findViewById(R.id.edtPassword)
         val nxtbtn: Button = findViewById(R.id.btnLogin)
         val nxtbtn2: TextView = findViewById(R.id.btnRegister)
+        nxtbtn.setOnClickListener {
+            val intent = Intent(this, movieList::class.java)
+            startActivity(intent)
+        }
+
 
         // Set click listener for login button
-        nxtbtn.setOnClickListener {
-            if (validateForm()) {
-                attemptLogin()
-            }
-        }
+        //nxtbtn.setOnClickListener {
+        //    if (validateForm()) {
+        //        attemptLogin()
+        //    }
+        //}
 
         // Set click listener for register button
         nxtbtn2.setOnClickListener {

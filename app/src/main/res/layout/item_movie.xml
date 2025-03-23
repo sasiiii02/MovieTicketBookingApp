@@ -7,22 +7,21 @@
     android:gravity="center"
     android:background="?android:attr/selectableItemBackground">
 
-    <!-- Movie Poster (Image) -->
     <ImageView
         android:id="@+id/movie_poster"
         android:layout_width="150dp"
-        android:layout_height="225dp"
+        android:layout_height="250dp"
+        android:contentDescription="@string/movieposter"
         android:scaleType="centerCrop"
         android:src="@drawable/batman_poster" />
 
-    <!-- Movie Title -->
     <TextView
         android:id="@+id/movie_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Movie Title"
-        android:textSize="14sp"
-        android:textColor="@android:color/white"
+        android:layout_width="145dp"
+        android:layout_height="34dp"
         android:layout_marginTop="8dp"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal"
+        android:text="@string/movie_title"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.example.movieticketbookingapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,12 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         //find the button
 
-        val nxtbtn1 : Button = findViewById(R.id.nxtbtn1)
-        nxtbtn1.setOnClickListener{
-            //create an implicit intent using the custom actions
-            val intent = Intent(this,Login::class.java)
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, OnBoardOne::class.java)
             startActivity(intent)
-        }
+            finish() // Close this activity so the user can't go back
+        }, 3000) // 3000ms = 3 seconds
 
 
 

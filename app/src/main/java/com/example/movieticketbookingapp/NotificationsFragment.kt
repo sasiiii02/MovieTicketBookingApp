@@ -1,59 +1,42 @@
 package com.example.movieticketbookingapp
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [NotificationsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class NotificationsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notifications, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_notifications, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment NotificationsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            NotificationsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+
+        // Sample Data
+        val notificationList = mutableListOf(
+            Notification("Today", "10:30 AM", "Dune: Part Two", "Your booking for 'Dune: Part Two' at Grand Cinemas is confirmed."),
+            Notification("Today", "12:00 PM", "Avatar 3", "Reminder: 'Avatar 3' starts in 1 hour at IMAX Theatre."),
+            Notification("Yesterday", "08:45 PM", "John Wick 5", "Your seat upgrade for 'John Wick 5' is successful."),
+            Notification("Yesterday", "07:15 PM", "Deadpool 3", "Flash Sale: Get 20% off on 'Deadpool 3' tickets for today!"),
+            Notification("Today", "03:00 PM", "Mission Impossible 8", "Your refund for 'Mission Impossible 8' has been processed."),
+            Notification("Yesterday", "06:30 PM", "Oppenheimer", "Special Screening Alert: 'Oppenheimer' Director’s Cut - Limited Seats!"),
+            Notification("Today", "09:00 AM", "Spider-Man: Beyond the Spider-Verse", "Your booking for 'Spider-Man: Beyond the Spider-Verse' is confirmed."),
+            Notification("Today", "02:45 PM", "The Batman 2", "Reminder: 'The Batman 2' starts at 3:30 PM at Dolby Atmos Theatre."),
+            Notification("Yesterday", "05:00 PM", "Fast & Furious 11", "Exclusive Offer: Buy 1 Get 1 Free on 'Fast & Furious 11' tickets."),
+            Notification("Today", "11:15 AM", "The Joker 2", "Your tickets for 'The Joker 2' have been successfully downloaded.")
+        )
+
+
+        // Set up RecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = NotificationAdopter(notificationList)
+
+        return view
     }
 }

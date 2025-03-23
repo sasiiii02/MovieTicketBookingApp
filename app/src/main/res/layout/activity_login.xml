@@ -105,6 +105,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/signin_with_google"
                     android:src="@drawable/google"
                     android:layout_marginStart="120dp">
                     </ImageView>

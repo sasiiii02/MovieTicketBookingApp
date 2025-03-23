@@ -13,6 +13,56 @@
     <string name="register_now">Register Now</string>
     <string name="twitter">Twitter</string>
     <string name="facebook">Facebook</string>
+    <string name="signin_with_google">SignIn with Google</string>
+    <string name="signup">SignUp</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="re_enter_password">Re - Enter Password</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="agree_to_terms_and_conditions">Agree to terms and conditions</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login_now">Login Now</string>
+    <string name="menubar">menubar</string>
+    <string name="cinemate">CineMate</string>
+    <string name="category1">Romance</string>
+    <string name="category2">Sad</string>
+    <string name="category3">Action</string>
+    <string name="category4">Adventure</string>
+    <string name="now">Now Showing</string>
+    <string name="Search">Search Movies</string>
+    <string name="category">Category</string>
+    <string name="up">Upcoming</string>
+
+    <string name="SelectSeats">Select Seats</string>
+    <string name="SelectDate">Select a Date</string>
+    <string name="SelectTime">Select a Time</string>
+    <string name="Selectseat">Select a Seat</string>
+    <string name="aval">Available</string>
+    <string name="selected">Selected</string>
+    <string name="res">Reserved</string>
+
+    <string name="myticket">My tickets</string>
+    <string name="movieposter">movieposter</string>
+    <string name="qr">qr</string>
+    <string name="Settings">Settings</string>
+    <string name="download">download</string>
+    <string name="launchscreen">launchscreen</string>
+    <string name="logo">logo</string>
+    <string name="onboardscreen1">onboardscreen1</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="card">card</string>
+    <string name="sasanka_karunarathna">Sasanka Karunarathna</string>
+    <string name="notifications">Notifications</string>
+    <string name="agreements">Agreements</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name :</string>
+    <string name="email">Email:</string>
+    <string name="phone">Phone:</string>
+    <string name="pass">************</string>
+    <string name="movie_title">Movie Title</string>
 
 
 </resources>

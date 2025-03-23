@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="100dp"
-                android:text="SignUp"
+                android:text="@string/signup"
                 android:textColor="@color/white"
                 android:textSize="50sp"
                 android:textStyle="bold" />
@@ -37,11 +37,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Enter User Name"
+                android:hint="@string/enter_user_name"
                 android:inputType="text"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -54,10 +55,11 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Enter Email"
-                android:inputType="text"
+                android:hint="@string/enter_email"
+                android:inputType="textEmailAddress"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
@@ -69,10 +71,11 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Enter Password"
-                android:inputType="text"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
@@ -84,10 +87,11 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Re - Enter Password"
-                android:inputType="text"
+                android:hint="@string/re_enter_password"
+                android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
@@ -98,25 +102,27 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="32dp"
+                android:autofillHints=""
                 android:background="@drawable/edittext_background"
                 android:ems="10"
-                android:hint="Enter Mobile Number"
-                android:inputType="text"
+                android:hint="@string/enter_mobile_number"
+               android:inputType="phone"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white" />
-            <TextView
-                android:id="@+id/agreetxt"
+
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="  Agree to terms and conditions"
-                android:layout_marginLeft="40dp"
-                android:drawableStart="@drawable/checked"
+                android:layout_marginStart="40dp"
+                android:text="@string/agree_to_terms_and_conditions"
                 android:textColor="@color/white"
-                android:textSize="16sp">
+                android:buttonTint="@color/white"
+                android:textSize="16sp"/>
 
-            </TextView>
+
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -129,7 +135,7 @@
                 android:layout_marginEnd="32dp"
                 android:height="50sp"
                 android:background="@drawable/orange_background"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -138,8 +144,8 @@
                 android:id="@+id/txt1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Already have an account?"
+                android:layout_marginTop="150dp"
+                android:text="@string/already_have_an_account"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="16sp">
@@ -152,13 +158,15 @@
                 android:id="@+id/txtLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login Now"
+                android:text="@string/login_now"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold">
 
             </TextView>
+
+
 
 
         </LinearLayout>
